@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #171717;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul{
+  padding: 15px;
+  border: 1px solid white;
+  font-family: "Chivo Mono", monospace;
+  display: flex;
+  gap: 72px;
+}
+ul li{
+  list-style: none;
+}
+ul li a{
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  transition: 0.5 ease;
+}
+ul:hover{
+  border: 3px solid #f46b30;
+}
+ul:hover li a {
+  color: #f46b30;
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+ul:hover li a:not(:hover){
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
